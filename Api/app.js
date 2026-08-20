@@ -39,11 +39,7 @@ app.use(trimmer());
 app.use(swagger());
 app.use(passport());
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
-app.use((req, res, next) => {
-  req.io = io;
-  return next();
-});
-
+// Removed sockert.io middleware since no routes use it
 app.get('/', (req, res, next) => next(SendData({ message: 'RestAPI is alive!' })));
 
 const excludedPaths = [];

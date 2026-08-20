@@ -13,7 +13,41 @@ const mockData = {
       updatedAt: new Date()
     }
   ],
-  transactions: []
+  transactions: [
+    {
+      _id: '1787255104882',
+      userId: '1',
+      type: 'income',
+      amount: 3500,
+      category: 'salary',
+      description: 'Monthly salary',
+      date: '2026-08-01',
+      createdAt: new Date('2026-08-01'),
+      updatedAt: new Date('2026-08-01')
+    },
+    {
+      _id: '1787255101143',
+      userId: '1',
+      type: 'expense',
+      amount: 1200,
+      category: 'rent',
+      description: 'August rent payment',
+      date: '2026-08-02',
+      createdAt: new Date('2026-08-02'),
+      updatedAt: new Date('2026-08-02')
+    },
+    {
+      _id: '1787255100054',
+      userId: '1',
+      type: 'expense',
+      amount: 85.50,
+      category: 'food',
+      description: 'Weekly groceries',
+      date: '2026-08-05',
+      createdAt: new Date('2026-08-05'),
+      updatedAt: new Date('2026-08-05')
+    },
+  ]
 };
 
 // Mock database methods
@@ -22,20 +56,20 @@ const mockDB = {
   findUserByEmail: async (email) => {
     return mockData.users.find(u => u.email === email);
   },
-  
+
   findUserById: async (id) => {
     return mockData.users.find(u => u._id === id);
   },
-  
+
   // Transaction methods
   findTransactionsByUser: async (userId) => {
     return mockData.transactions.filter(t => t.userId === userId);
   },
-  
+
   findTransactionById: async (id) => {
     return mockData.transactions.find(t => t._id === id);
   },
-  
+
   createTransaction: async (transactionData) => {
     const newTransaction = {
       _id: String(Date.now()),
@@ -46,7 +80,7 @@ const mockDB = {
     mockData.transactions.push(newTransaction);
     return newTransaction;
   },
-  
+
   updateTransaction: async (id, updateData) => {
     const index = mockData.transactions.findIndex(t => t._id === id);
     if (index !== -1) {
@@ -59,7 +93,7 @@ const mockDB = {
     }
     return null;
   },
-  
+
   deleteTransaction: async (id) => {
     const index = mockData.transactions.findIndex(t => t._id === id);
     if (index !== -1) {
@@ -77,7 +111,7 @@ class MockUser {
     if (query._id) return mockDB.findUserById(query._id);
     return null;
   }
-  
+
   static async findById(id) {
     return mockDB.findUserById(id);
   }
@@ -90,19 +124,19 @@ class MockTransaction {
     }
     return mockData.transactions;
   }
-  
+
   static async findById(id) {
     return mockDB.findTransactionById(id);
   }
-  
+
   static async create(data) {
     return mockDB.createTransaction(data);
   }
-  
+
   static async findByIdAndUpdate(id, data) {
     return mockDB.updateTransaction(id, data);
   }
-  
+
   static async findByIdAndDelete(id) {
     return mockDB.deleteTransaction(id);
   }
