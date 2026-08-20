@@ -44,7 +44,40 @@
     "filter": "Filter",
     "home": "Home",
     "new": "Nuovo",
-    "ok": "Ok"
+    "ok": "Ok",
+    "transactions": "Transactions",
+    "amount": "Amount",
+    "date": "Date",
+    "loading": "Loading"
+  },
+  "transactions": {
+    "title": "Transactions",
+    "addNew": "New Transaction",
+    "income": "Income",
+    "expense": "Expense",
+    "balance": "Balance",
+    "totalIncome": "Total Income",
+    "totalExpenses": "Total Expenses",
+    "noTransactions": "No transactions yet. Add your first one!",
+    "categories": {
+      "salary": "Salary",
+      "freelance": "Freelance",
+      "investment": "Investment",
+      "food": "Food",
+      "transport": "Transport",
+      "rent": "Rent",
+      "utilities": "Utilities",
+      "entertainment": "Entertainment",
+      "healthcare": "Healthcare",
+      "shopping": "Shopping",
+      "other": "Other"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "recentTransactions": "Recent Transactions",
+    "summary": "Financial Summary",
+    "viewAll": "View All Transactions"
   },
   "login": {
     "btn": "Sign In",

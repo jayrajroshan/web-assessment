@@ -44,7 +44,40 @@
     "filter": "Filtra",
     "home": "Home",
     "new": "Nuovo",
-    "ok": "Ok"
+    "ok": "Ok",
+    "transactions": "Transazioni",
+    "amount": "Importo",
+    "date": "Data",
+    "loading": "Caricamento"
+  },
+  "transactions": {
+    "title": "Transazioni",
+    "addNew": "Nuova Transazione",
+    "income": "Entrata",
+    "expense": "Spesa",
+    "balance": "Bilancio",
+    "totalIncome": "Entrate Totali",
+    "totalExpenses": "Spese Totali",
+    "noTransactions": "Nessuna transazione. Aggiungi la prima!",
+    "categories": {
+      "salary": "Stipendio",
+      "freelance": "Freelance",
+      "investment": "Investimento",
+      "food": "Cibo",
+      "transport": "Trasporti",
+      "rent": "Affitto",
+      "utilities": "Utenze",
+      "entertainment": "Intrattenimento",
+      "healthcare": "Sanità",
+      "shopping": "Shopping",
+      "other": "Altro"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "recentTransactions": "Transazioni Recenti",
+    "summary": "Riepilogo Finanziario",
+    "viewAll": "Vedi Tutte le Transazioni"
   },
   "login": {
     "btn": "Accedi",
